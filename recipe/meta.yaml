@@ -1,5 +1,5 @@
 {% set name = "linkchecker" %}
-{% set version = "10.2.0" %}
+{% set version = "10.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/LinkChecker-{{ version }}.tar.gz
-  sha256: 943a3f3f30279fbb85fc6f0569d808cf1ae4be0de4c2050c6f713429b8e58b59
+  sha256: 97eae069ccfe892a18e380c7f4762dfe3f352e87c442ef6124e8c60b887cddcd
 
 build:
   noarch: python
