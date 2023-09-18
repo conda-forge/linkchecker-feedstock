@@ -1,11 +1,11 @@
-About linkchecker
-=================
+About linkchecker-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/linkchecker-feedstock/blob/main/LICENSE.txt)
 
 Home: https://linkchecker.github.io/linkchecker/
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/linkchecker-feedstock/blob/main/LICENSE.txt)
 
 Summary: Check websites for broken links
 
