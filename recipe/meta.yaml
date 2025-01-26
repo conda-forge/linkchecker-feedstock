@@ -6,25 +6,25 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/LinkChecker-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/LinkChecker-{{ version }}.tar.gz
   sha256: 6250dd29261ddd6df4be9e979bd47a759a6cfafbcaf0f7926afbe2a230aa761a
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - linkchecker = linkcheck.command.linkchecker:linkchecker
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     # Linkchecker uses hatchling and the hatch-vcs plugin to build
     - hatchling
     - hatch-vcs
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - beautifulsoup4 >=4.8.1
     - dnspython >=2.0
     - requests >=2.4
@@ -37,6 +37,7 @@ test:
     - linkchecker --version
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://linkchecker.github.io/linkchecker/
